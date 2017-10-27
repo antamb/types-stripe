@@ -1,0 +1,8 @@
+{
+  "name": "@types/stripe",
+  "version": "4.7.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antamb/types-stripe.git"
+  }
+}

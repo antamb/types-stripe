@@ -3791,7 +3791,7 @@ declare namespace Stripe {
         }
     }
 
-    namespace cards {
+    export namespace cards {
         /**
          * You can store multiple cards on a customer in order to charge the customer later. You
          * can also store multiple debit cards on a recipient in order to transfer to those cards later.
@@ -3850,7 +3850,7 @@ declare namespace Stripe {
             /**
              * The card number
              */
-            number: number;
+            number: string;
 
             /**
              * Card brand. Can be Visa, American Express, MasterCard, Discover, JCB, Diners Club, or Unknown.
@@ -3966,7 +3966,7 @@ declare namespace Stripe {
             /**
              * The card number, as a string without any separators.
              */
-            number: number;
+            number: string;
 
             /**
              * Card security code. Required unless your account is registered in
@@ -4115,6 +4115,11 @@ declare namespace Stripe {
             trial_start: number;
         }
 
+        interface ISubscriptionItemOptions {
+          plan: string;
+          quantity?: number;
+        }
+
         interface ISubscriptionCustCreationOptions extends IDataOptionsWithMetadata {
             /**
              * The identifier of the plan to subscribe the customer to.
@@ -4133,6 +4138,8 @@ declare namespace Stripe {
              * particular subscription.
              */
             coupon?: string;
+
+            items?: ISubscriptionItemOptions[];
 
             source?: sources.ISourceCreationOptions;
 

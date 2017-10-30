@@ -173,7 +173,7 @@ declare namespace Stripe {
              * account holder to setup a username and password, and handle all account
              * management directly with them.
              */
-            managed?: boolean;
+            type: 'custom' | 'standard';
         }
 
         interface IAccountShared {

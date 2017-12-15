@@ -4116,6 +4116,7 @@ declare namespace Stripe {
         }
 
         interface ISubscriptionItemOptions {
+          id: string;
           plan: string;
           quantity?: number;
         }
@@ -4139,6 +4140,9 @@ declare namespace Stripe {
              */
             coupon?: string;
 
+            /**
+             * List of items constituting the subscription.
+             */
             items?: ISubscriptionItemOptions[];
 
             source?: sources.ISourceCreationOptions;
@@ -4229,6 +4233,11 @@ declare namespace Stripe {
              * customer's trial immediately.
              */
             trial_end?: number;
+
+            /**
+             * List of items constituting the subscription.
+             */
+            items?: ISubscriptionItemOptions[];
         }
 
         interface ISubscriptionCancellationOptions extends IDataOptions {

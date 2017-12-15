@@ -4117,7 +4117,7 @@ declare namespace Stripe {
             /**
              * List of items constituting the subscription.
              */
-            items?: ISubscriptionItemOptions[];
+            items: IList<ISubscriptionItemOptions>;
         }
 
         interface ISubscriptionItemOptions {

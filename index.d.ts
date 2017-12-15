@@ -4113,6 +4113,11 @@ declare namespace Stripe {
              * If the subscription has a trial, the beginning of that trial.
              */
             trial_start: number;
+
+            /**
+             * List of items constituting the subscription.
+             */
+            items?: ISubscriptionItemOptions[];
         }
 
         interface ISubscriptionItemOptions {

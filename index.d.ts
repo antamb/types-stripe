@@ -4117,13 +4117,18 @@ declare namespace Stripe {
             /**
              * List of items constituting the subscription.
              */
-            items: IList<ISubscriptionItemOptions>;
+            items: IList<ISubscriptionItem>;
         }
 
         interface ISubscriptionItemOptions {
-          id: string;
           plan: string;
           quantity?: number;
+        }
+
+        interface ISubscriptionItem {
+          id: string;
+          quantity?: number;
+          plan: plans.Iplan;
         }
 
         interface ISubscriptionCustCreationOptions extends IDataOptionsWithMetadata {

@@ -4128,7 +4128,7 @@ declare namespace Stripe {
 
         interface ISubscriptionItem {
           quantity?: number;
-          plan: plans.Iplan;
+          plan: plans.IPlan;
         }
 
         interface ISubscriptionCustCreationOptions extends IDataOptionsWithMetadata {

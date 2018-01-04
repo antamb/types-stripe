@@ -4122,7 +4122,7 @@ declare namespace Stripe {
 
         interface ISubscriptionItemOptions {
           id: string;
-          plan: string | plans.IPlan;
+          plan: string;
           quantity?: number;
         }
 

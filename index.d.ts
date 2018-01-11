@@ -1805,7 +1805,7 @@ declare namespace Stripe {
             /**
              * ID of the latest charge generated for this invoice, if any. [Expandable]
              */
-            charge: string | charges.ICharge;
+            charge: string | charges.ICharge | null;
 
             /**
              * Whether or not the invoice is still trying to collect payment. An invoice is closed if it's either paid or
@@ -2280,7 +2280,7 @@ declare namespace Stripe {
             /**
              * The ID of the payment used to pay for the order. Present if the order status is paid, fulfilled, or refunded. [Expandable]
              */
-            charge: string | charges.ICharge;
+            charge: string | charges.ICharge | null;
 
             created: number;
 
@@ -3311,7 +3311,7 @@ declare namespace Stripe {
              * transfer. If null, the transfer was funded from the available
              * balance. [Expandable]
              */
-            source_transaction: string | charges.ICharge;
+            source_transaction: string | charges.ICharge | null;
 
             /**
              * The source balance this transfer came from.
